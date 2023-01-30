@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<conio.h>
+void fibo(int n);
+main()
+{
+int n;
+clrscr();
+printf("Enter range ");
+scanf("%d",&n);
+printf("\n0  1  ");
+fibo(n);
+getch();
+}
+void fibo(int n)
+{
+static int a=0,b=1,c;
+if(n>2)
+{
+c=a+b;
+a=b;
+b=c;
+printf("%d  ",c);
+fibo(n-1);
+}
+getch();
+}
